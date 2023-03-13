@@ -8,9 +8,9 @@ namespace OnlineFoodOrdering
         {
             int day;
             int time;
-            int breakfastsetCount = 5;
-            int weekendsetCount = 2;
-            int coffeeCount = 3;
+            int breakfastset = 5;
+            int weekendset = 2;
+            int coffee = 3;
             
                 Console.WriteLine("Enter the your days:");
                 day = int.Parse(Console.ReadLine());
@@ -31,38 +31,38 @@ namespace OnlineFoodOrdering
                 switch (menu)
                 {
                     case "Breakfast Set":
-                        if (time >=11 ||breakfastsetCount <0 )
+                        if (time >=11 ||breakfastset <0 )
                         {
                             Console.WriteLine("Sorry, your order is not available.");
                             break;
                         }
-                        else if (breakfastsetCount ==1 )
+                        else if (breakfastset ==1 )
                         {
                             Console.WriteLine("Sorry, your order is out of stock.");
                             continue;
                         }
                         else
                         {
-                            breakfastsetCount--;
-                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastsetCount);
+                            breakfastset--;
+                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
                         }
                         break;
                         
                     case "Weekend Set":
-                        if (day >= 1 && day <= 5 && weekendsetCount <0 && time<8 && time>18)
+                        if (day >= 1 && day <= 5 && weekendset <0 && time<8 && time>18)
                         {
                             Console.WriteLine("Sorry, your order is not available.");
                             continue;
                         }
-                        else if (weekendsetCount ==1)
+                        else if (weekendset ==1)
                         {
                             Console.WriteLine("Sorry, your order is out of stock.");
                             continue;
                         }
                         else
                         {
-                            weekendsetCount--;
-                            Console.WriteLine("Order accepted. Remaining Weekend Sets: " + weekendsetCount);
+                            weekendset--;
+                            Console.WriteLine("Order accepted. Remaining Weekend Sets: " + weekendset);
                         }
                         break;
                         
@@ -72,15 +72,15 @@ namespace OnlineFoodOrdering
                             Console.WriteLine("Sorry, your order is not available.");
                             continue;
                         }
-                     else if (coffeeCount==1)
+                     else if (coffee==1)
                         {
                             Console.WriteLine("Sorry, your order is out of stock.");
                             continue;
                         }
                         else
                         {
-                            coffeeCount--;
-                            Console.WriteLine("Order accepted. Remaining Coffees: " + coffeeCount);
+                            coffee--;
+                            Console.WriteLine("Order accepted. Remaining Coffees: " + coffee);
                         }
                         break;
                         
