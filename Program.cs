@@ -39,12 +39,16 @@ namespace OnlineFoodOrdering
                         else if (breakfastset ==1 )
                         {
                             Console.WriteLine("Sorry, your order is out of stock.");
+                            Console.WriteLine("Order accepted. Remaining Weekend Sets: "+weekendset);
+                            Console.WriteLine("Order accepted. Remaining Coffees: "+coffee);
                             continue;
                         }
                         else
                         {
                             breakfastset--;
                             Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
+                            Console.WriteLine("Order accepted. Remaining Weekend Sets: "+weekendset);
+                            Console.WriteLine("Order accepted. Remaining Coffees: "+coffee);
                         }
                         break;
                         
@@ -56,13 +60,17 @@ namespace OnlineFoodOrdering
                         }
                         else if (weekendset ==1)
                         {
+                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
                             Console.WriteLine("Sorry, your order is out of stock.");
+                            Console.WriteLine("Order accepted. Remaining Coffees:"+coffee);
                             continue;
                         }
                         else
                         {
                             weekendset--;
+                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
                             Console.WriteLine("Order accepted. Remaining Weekend Sets: " + weekendset);
+                            Console.WriteLine("Order accepted. Remaining Coffees: "+coffee);
                         }
                         break;
                         
@@ -75,11 +83,15 @@ namespace OnlineFoodOrdering
                      else if (coffee==1)
                         {
                             Console.WriteLine("Sorry, your order is out of stock.");
+                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
+                            Console.WriteLine("Order accepted. Remaining Weekend Sets: " + weekendset);
                             continue;
                         }
                         else
                         {
                             coffee--;
+                            Console.WriteLine("Order accepted. Remaining Breakfast Sets: " + breakfastset);
+                            Console.WriteLine("Order accepted. Remaining Weekend Sets: " + weekendset);
                             Console.WriteLine("Order accepted. Remaining Coffees: " + coffee);
                         }
                         break;
@@ -94,11 +106,3 @@ namespace OnlineFoodOrdering
         }
     }
 }
-
-
-
-
-
-
-
-
